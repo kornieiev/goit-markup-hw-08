@@ -1,11 +1,20 @@
 .filter-btn {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  justify-content: flex-start;
   gap: 8px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .filter-btn-name {
+  margin-bottom: 15px;
   padding: 6px 22px;
   font-family: 'Roboto';
   font-style: normal;
@@ -32,9 +41,18 @@
     }
 }
 
+.example-card {
+  width: 100%;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
 .example-link,
 .example-card {
-  flex-basis: calc((100% - 2 * 30px) / 3);
   cursor: pointer;
   border-radius: 4px;
   display: block;

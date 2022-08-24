@@ -589,7 +589,15 @@ header .container {
 }
 .footer .container {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__logo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer__logo {
@@ -603,6 +611,10 @@ header .container {
 
 .address__list {
   margin-top: 20px;
+  margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .address__item:nth-child(1) {
@@ -647,8 +659,9 @@ header .container {
 }
 
 .add {
-  display: block;
-  margin-left: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .subscribe__title,
@@ -685,15 +698,21 @@ header .container {
 }
 
 .subscribe {
-  margin-left: 93px;
+  display: flex;
+  margin-top: 60px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .subscribe__form {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
 }
 
 .subscribe__input {
-  width: 358px;
+  width: 100%;
   height: 50px;
   background-color: transparent;
   outline: transparent;
@@ -739,6 +758,7 @@ header .container {
 }
 
 .subscribe__btn {
+  margin-top: 20px;
   width: 200px;
   height: 50px;
   background-color: var(--hover-text-color);
@@ -1018,12 +1038,25 @@ header .container {
 
 .filter-btn {
   display: flex;
-  margin-bottom: 50px;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  justify-content: flex-start;
   gap: 8px;
+}
+@media screen and (min-width: 768px) {
+  .filter-btn {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter-btn {
+    margin-bottom: 50px;
+  }
 }
 
 .filter-btn-name {
+  margin-bottom: 15px;
   padding: 6px 22px;
   font-family: "Roboto";
   font-style: normal;
@@ -1046,9 +1079,22 @@ header .container {
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
+.example-card {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .example-card {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .example-card {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
 .example-link,
 .example-card {
-  flex-basis: calc((100% - 60px) / 3);
   cursor: pointer;
   border-radius: 4px;
   display: block;
