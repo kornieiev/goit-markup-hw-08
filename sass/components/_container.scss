@@ -1,9 +1,20 @@
 .container {
-  width: 1200px;
+  // width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
+  @include mobile {
+    max-width: 480px;
+  }
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
 }
+
 
 header .container {
   display: flex;
@@ -11,5 +22,9 @@ header .container {
 }
 
   .section {
-  padding: 94px 0;
+  padding: 60px 0;
+  @include desktop {
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
 }

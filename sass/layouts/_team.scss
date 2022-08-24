@@ -1,7 +1,11 @@
 .team {
   background-color: var(--second-bcg-color);
-  padding-bottom: 94px;
-  padding-top: 94px;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  @include desktop {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
 }
 
 .team__name {
@@ -16,6 +20,7 @@
 
 .team__list {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
@@ -30,7 +35,7 @@
 
 .team__combine {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 24px;
 }
 
 .team__item {
@@ -38,6 +43,13 @@
   border: 0px var(--third-bcg-color) solid;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),  0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+  width: 100%;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .team__link {
@@ -60,17 +72,6 @@
 .team__icon {
   fill: currentColor;
 }
-
-  /* второй вариант, как можно сделать смену цвета при ховере на icon: */
-  /* .team-soc-link:hover {
-  background-color: var(--hover-text-color);
-  }
-  .team-soc-link:hover .team-soc-icon {
-  fill: #fff;
-  }
-  .team-soc-icon {
-  fill: var(--icon-color);
-  } */
 
 .team__soc-list {
   display: flex;

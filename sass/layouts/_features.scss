@@ -1,15 +1,35 @@
 .features__icon-box {
+  border: 1px solid black;
   display: flex;
-  width: 270px;
+  // flex-wrap: wrap;
   height: 120px;
   background-color: var(--second-bcg-color);
   align-items: center;
   justify-content: center;
   margin-bottom: 30px;
+  width: 100%;
+}
+
+.features__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  @include tablet {
+    width: calc((100% - 30px) / 2);
+    justify-content: flex-start;
+  }
+  @include desktop {
+    width: calc((100% - 90px) / 4);
+  }
 }
 
 .section.features {
-  padding-bottom: 94px;
+  padding-bottom: 60px;
+  @include desktop {
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
 }
 
 .features__subtitle {
@@ -33,6 +53,7 @@
 .features__list {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
-  align-items: center;
 }
+
