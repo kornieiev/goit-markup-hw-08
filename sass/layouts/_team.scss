@@ -1,0 +1,79 @@
+.team {
+  background-color: var(--second-bcg-color);
+  padding-bottom: 94px;
+  padding-top: 94px;
+}
+
+.team__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+  margin-bottom: 10px;
+}
+
+.team__list {
+  display: flex;
+  gap: 30px;
+}
+
+.team__role {
+  font-size: 16px;
+  line-height: calc(19 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+  margin-bottom: 16px;
+}
+
+.team__combine {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.team__item {
+  background-color: var(--third-bcg-color);
+  border: 0px var(--third-bcg-color) solid;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),  0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.team__link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--third-bcg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--icon-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus,
+  &:hover {
+    background-color: var(--hover-text-color);
+    color: var(--third-bcg-color);
+  }
+}
+
+.team__icon {
+  fill: currentColor;
+}
+
+  /* второй вариант, как можно сделать смену цвета при ховере на icon: */
+  /* .team-soc-link:hover {
+  background-color: var(--hover-text-color);
+  }
+  .team-soc-link:hover .team-soc-icon {
+  fill: #fff;
+  }
+  .team-soc-icon {
+  fill: var(--icon-color);
+  } */
+
+.team__soc-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

@@ -1,0 +1,115 @@
+.filter-btn {
+  display: flex;
+  margin-bottom: 50px;
+  justify-content: center;
+  gap: 8px;
+}
+
+.filter-btn-name {
+  padding: 6px 22px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: calc(26 / 16);
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-text-color);
+  background-color: var(--second-bcg-color);
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      color: var(--third-text-color);
+      background-color: var(--hover-text-color);
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+    }
+}
+
+.example-link,
+.example-card {
+  flex-basis: calc((100% - 2 * 30px) / 3);
+  cursor: pointer;
+  border-radius: 4px;
+  display: block;
+}
+
+.example-link:focus,
+.example-link:hover {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  outline: transparent;
+}
+
+  /* .example-box:hover .example-cover-text означає: при наведенні курсору на .example-box змінюй текст, а саме - підганяй його до верху */
+.example-card:hover .example-cover-text,
+.example-link:focus .example-cover-text {
+  transform: translateY(0%);
+  /* transition: color #fff 500ms cubic-bezier(0.4, 0, 0.2, 1),
+  background-color 500ms rgba(33, 150, 243, 0.9); */
+}
+
+.example-box {
+  position: relative;
+}
+
+/*  */
+.example-box-wrap {
+  position: relative;
+  overflow: hidden;
+  /* overflow: hidden - створює умовный карман в який  ховаєтсья вспливаюче вікно*/
+}
+
+.example-cover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--third-text-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  padding: 63px 24px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+  height: 100%;
+  transform: translateY(100%);
+  transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: auto;
+  /* overflow: auto - дозволяє зявлятись скролу, якщо є переповнення
+  overflow: scroll - скрол буде завжди */
+}
+
+.examples {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.example-list {
+  padding: 20px 24px;
+  border-left: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+}
+
+.example-name {
+  margin-bottom: 5px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--main-text-color);
+}
+
+.example-type {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
+}
