@@ -1,5 +1,4 @@
 .container {
-  // width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding-left: 15px;
@@ -11,7 +10,9 @@
     max-width: 768px;
   }
   @include desktop {
-    max-width: 1200px;
+    min-width: 1199px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -21,10 +22,18 @@ header .container {
   align-items: center;
 }
 
-  .section {
+.section {
   padding: 60px 0;
+  @include mobile {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
+  @include tablet {
+    padding-bottom: 60px;
+    padding-top: 60px;
+  }
   @include desktop {
-    padding-bottom: 94px;
-    padding-top: 94px;
+    padding-bottom: 60px;
+    padding-top: 60px;
 }
 }
