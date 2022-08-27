@@ -1,7 +1,7 @@
 .general__btn {
   display: block;
   margin: auto;
-  padding: 10px 32px;
+  padding: 10px 24px;
   font-family: 'Roboto';
   font-weight: 700;
   font-size: 16px;
@@ -19,6 +19,9 @@
     &:focus {
       border: 1px solid black;
     }
+  @include desktop{
+    padding: 10px 32px;
+  }
 }
 
 .button-submit {
