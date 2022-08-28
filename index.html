@@ -143,7 +143,11 @@
             <li class="portfolio__item">
               <img
                 class="portfolio__img"
-                src="./images/looking-in-tab.jpg"
+                srcset="
+                  ./images/looking-in-tab-desk.jpg    1x,
+                  ./images/looking-in-tab-desk-x2.jpg 2x
+                  "
+                src="./images/looking-in-tab-desk.jpg"
                 alt="Смотрю в планшет"
                 width="370"
                 height="294"
@@ -181,12 +185,36 @@
           <h2 class="team__title" data-aos="fade-up" data-aos-duration="1000">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item list">
-              <img
-                src="./images/igor-demianenko.jpg"
+              <picture>
+                <source 
+                  srcset="
+                    ./images/igor-demianenko-desk.jpg 1x,
+                    ./images/igor-demianenko-desk-x2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source 
+                  srcset="
+                    ./images/igor-demianenko-tab.jpg 1x,
+                    ./images/igor-demianenko-tab-x2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source 
+                  srcset="
+                    ./images/igor-demianenko-mob.jpg    1x,
+                    ./images/igor-demianenko-mob-x2.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                src="./images/igor-demianenko-mob.jpg"
                 alt="Игорь Демьяненко - Product Designer"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
+              </picture>
+              
               <div class="team__combine">
                 <h3 class="team__name">Игорь Демьяненко</h3>
                 <p class="team__role" lang="en">Product Designer</p>
@@ -220,12 +248,37 @@
               </div>
             </li>
             <li class="team__item ">
-              <img
-                src="./images/olga-repina.jpg"
+
+              <picture>
+                <source 
+                  srcset="
+                    ./images/olga-repina-desk.jpg 1x,
+                    ./images/olga-repina-desk-x2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source 
+                  srcset="
+                    ./images/olga-repina-tab.jpg 1x,
+                    ./images/olga-repina-tab-x2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source 
+                  srcset="
+                    ./images/olga-repina-mob.jpg    1x,
+                    ./images/olga-repina-mob-x2.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                src="./images/olga-repina-mob.jpg"
                 alt="Ольга Репина - Frontend Developer"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
+              </picture>
+
               <div class="team__combine">
                 <h3 class="team__name">Ольга Репина</h3>
                 <p class="team__role" lang="en">Frontend Developer</p>
@@ -259,12 +312,37 @@
               </div>
             </li>
             <li class="team__item ">
-              <img
-                src="./images/nikolay-tarasov.jpg"
+
+              <picture>
+                <source 
+                  srcset="
+                    ./images/nikolay-tarasov-desk.jpg 1x,
+                    ./images/nikolay-tarasov-desk-x2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source 
+                  srcset="
+                    ./images/nikolay-tarasov-tab.jpg 1x,
+                    ./images/nikolay-tarasov-tab-x2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source 
+                  srcset="
+                    ./images/nikolay-tarasov-mob.jpg    1x,
+                    ./images/nikolay-tarasov-mob-x2.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                src="./images/nikolay-tarasov-mob.jpg"
                 alt="Николай Тарасов - Marketing"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
+              </picture>
+
               <div class="team__combine">
                 <h3 class="team__name">Николай Тарасов</h3>
                 <p class="team__role" lang="en">Marketing</p>
@@ -298,12 +376,37 @@
               </div>
             </li>
             <li class="team__item ">
-              <img
-                src="./images/mihail-ermakov.jpg"
+
+              <picture>
+                <source 
+                  srcset="
+                    ./images/mihail-ermakov-desk.jpg 1x,
+                    ./images/mihail-ermakov-desk-x2.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source 
+                  srcset="
+                    ./images/mihail-ermakov-tab.jpg 1x,
+                    ./images/mihail-ermakov-tab-x2.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source 
+                  srcset="
+                    ./images/mihail-ermakov-mob.jpg    1x,
+                    ./images/mihail-ermakov-mob-x2.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                src="./images/mihail-ermakov-mob.jpg"
                 alt="Михаил Ермаков - UI Designer"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
+              </picture>
+
               <div class="team__combine">
                 <h3 class="team__name">Михаил Ермаков</h3>
                 <p class="team__role" lang="en">UI Designer</p>
