@@ -26,7 +26,7 @@
   </head>
   <body>
     <!---------- HEADER ---------->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
         <nav class="navigation">
           <a
@@ -63,8 +63,55 @@
             >
           </li>
         </ul>
+        <button class="mob-menu-open" type="button">
+          <svg class="mob-menu__icon-open" width="40" height="40">
+          <use href="./images/sprite.svg#icon-mob-menu-open"></use>
+          </svg></button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden">
+        <div class="container">
+        <div class="mob-menu-top">
+          <button class="mob-menu-close" type="button">
+            <svg class="mob-menu__icon-close" width="40" height="40">
+            <use href="./images/sprite.svg#icon-mob-menu-close"></use>
+            </svg></button>
+            <nav class="mob__menu-nav">
+              <ul class="mob-menu-nav__list list">
+                <li class="mob-menu-nav__item">
+                  <a href="./index.html" class="mob-menu-nav__link link mob-menu-nav__current">Студія</a>
+                </li>
+                <li class="mob-menu-nav__item">
+                  <a href="./portfolio.html" class="mob-menu-nav__link link">Портфоліо</a>
+                </li>
+                <li class="mob-menu-nav__item"><a href="" class="mob-menu-nav__link link">Контакти</a></li>
+              </ul>
+            </nav>
+        </div>
+          <div class="mob-menu-bottom">
+            <ul class="mob-contacts list">
+              <li class="mob-contacts__phone">
+                <a href="tel:+380961111111" class="mob-contacts__link link">
+                  +38 096 111 11 M8</a>
+              </li>
+              <li class="mob-contacts__mail">
+                <a href="mailto:info@devstudio.com" class="mob-contacts__link link">
+                  info@devstudio.com</a>
+              </li>
+            </ul>
+            <div class="mob-menu-network">
+              <a href="./portfolio.html" class="mob-menu-network__link"
+                >Instagram</a
+              ><a href="" class="mob-menu-network__link"
+                >Twitter</a
+              ><a href="" class="mob-menu-network__link"
+                >Facebook</a
+              ><a href="" class="mob-menu-network__link last"
+                >LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <!---------- MAIN CONTENT ---------->
     <main class="main">
@@ -157,7 +204,11 @@
             <li class="portfolio__item">
               <img
                 class="portfolio__img"
-                src="./images/looking-in-phone.jpg"
+                srcset="
+                  ./images/looking-in-phone-desk.jpg    1x,
+                  ./images/looking-in-phone-desk-x2.jpg 2x
+                  "
+                src="./images/looking-in-phone-desk.jpg"
                 alt="Смотрю в
             телефон"
                 width="370"
@@ -168,6 +219,13 @@
             <li class="portfolio__item">
               <img
                 class="portfolio__img"
+                srcset="
+                  ./images/looking-at-tab-again-desk.jpg    1x,
+                  ./images/looking-at-tab-again-desk-x2.jpg 2x
+                  "
+                src="./images/looking-at-tab-again-desk.jpg"
+                alt="Смотрю в
+            телефон"
                 src="./images/looking-at-tab-again.jpg"
                 alt="Опять смотрю
             в планшет"
@@ -612,6 +670,7 @@
       </div>
     </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
