@@ -119,6 +119,7 @@
   border: none;
   background-color: transparent;
   margin-left: auto;
+  margin-top: 10px;
   padding: 0;
 }
 
@@ -140,10 +141,12 @@
   > .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     justify-content: space-between;
     overflow: auto;
     align-items: stretch;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -152,6 +155,8 @@
   border: none;
   background-color: transparent;
   margin-left: auto;
+  margin-top: 10px;
+  margin-right: 15px;
   padding: 0;
 }
 
@@ -165,7 +170,7 @@
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #212121;
-  @include mobile {
+    @include mobile {
     font-size: 40px;
   }
 }
@@ -227,16 +232,20 @@ padding-left: 5px;
 .mob-menu-network__link+.last {
   padding-left: 5px;
   @include mobile {
-    padding-left: 10px;
+    padding-left: 10px; 
   }
 }
+.mob-menu-bottom .first {
+  padding-left: 0;
+}
+
 
 .mob-menu-network {
   
 }
 .mob-menu-top {
-  margin-left: 25px;
+  margin-left: 40px;
 }
 .mob-menu-bottom {
-  margin-left: 25px;
+  margin-left: 40px;
 }

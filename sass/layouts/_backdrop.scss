@@ -16,9 +16,9 @@
 }
 
 .modal {
-  padding: 40px;
-  width: 528px;
-  height: 581px;
+  padding: 10px;
+  width: 310px;
+  height: 530px;
   background-color: var(--third-bcg-color);
   border-radius: 4px;
   position: absolute;
@@ -26,6 +26,21 @@
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @include mobile {
+    padding: 40px;
+    width: 450px;
+    height: 609px;
+  }
+  @include tablet {
+    padding: 40px;
+    width: 450px;
+    height: 609px;
+  }
+  @include desktop {
+    padding: 40px;
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-close {
@@ -81,10 +96,22 @@
 .modal-title {
 display: block;
 font-weight: 700;
-font-size: 20px;
+font-size: 14px;
 line-height: 1.15;
 text-align: center;
 letter-spacing: 0.03em;
+@include mobile {
+font-size: 20px;
+line-height: 1.5;
+}
+@include tablet {
+  font-size: 20px;
+  line-height: 1.5;
+}
+@include desktop {
+  font-size: 20px;
+  line-height: 1.15;
+}
 }
 
 .input-wrap {
@@ -98,7 +125,10 @@ letter-spacing: 0.03em;
 }
 
 .modal-field-comment {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  @include mobile {
+    margin-bottom: 20px;
+  }
 }
 
 .modal-label {
@@ -156,11 +186,17 @@ letter-spacing: 0.03em;
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 9px;
   line-height: 1;
   letter-spacing: 0.03em;
   cursor: pointer;
   border-bottom: 1px solid var(--hover-text-color);
+  @include mobile {
+    font-size: 12px;
+  }
+  @include tablet {
+    font-size: 14px;
+  }
 }
 
 .input-modal-icon {
@@ -221,17 +257,26 @@ letter-spacing: 0.03em;
   display: flex;
   align-items: center;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 9px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
   cursor: pointer;
   justify-content: center;
+  @include mobile {
+    font-size: 12px;
+  }
+  @include tablet {
+    font-size: 14px;
+  }
 }
 
 .checkbox-label {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+  @include mobile {
+    margin-bottom: 30px;
+  }
 }

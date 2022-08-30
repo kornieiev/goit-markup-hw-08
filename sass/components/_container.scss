@@ -24,16 +24,16 @@
 
 .section {
   padding: 60px 0;
-  @include mobile {
-    padding-bottom: 60px;
-    padding-top: 60px;
-  }
-  @include tablet {
-    padding-bottom: 60px;
-    padding-top: 60px;
-  }
-  @include desktop {
-    padding-bottom: 60px;
-    padding-top: 60px;
-}
+//   @include mobile {
+//     padding-bottom: 60px;
+//     padding-top: 60px;
+//   }
+//   @include tablet {
+//     padding-bottom: 60px;
+//     padding-top: 60px;
+//   }
+//   @include desktop {
+//     padding-bottom: 60px;
+//     padding-top: 60px;
+// }
 }

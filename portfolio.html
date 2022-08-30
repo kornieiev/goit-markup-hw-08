@@ -28,7 +28,7 @@
   </head>
   <body>
     <!---------- HEADER ---------->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container">
         <nav class="navigation">
           <a
@@ -39,7 +39,7 @@
           >
           <ul class="navigation__list list">
             <li class="navigation__item">
-              <a href="./index.html" class="navigation__link link ">Студія</a>
+              <a href="./index.html" class="navigation__link link">Студія</a>
             </li>
             <li class="navigation__item">
               <a href="./portfolio.html" class="navigation__link link navigation__current">Портфоліо</a>
@@ -65,8 +65,55 @@
             >
           </li>
         </ul>
+        <button class="mob-menu-open" type="button">
+          <svg class="mob-menu__icon-open" width="40" height="40">
+          <use href="./images/sprite.svg#icon-mob-menu-open"></use>
+          </svg></button>
       </div>
-    </header> -->
+      <div class="mob-menu is-hidden">
+        <div class="container">
+        <div class="mob-menu-top">
+          <button class="mob-menu-close" type="button">
+            <svg class="mob-menu__icon-close" width="40" height="40">
+            <use href="./images/sprite.svg#icon-mob-menu-close"></use>
+            </svg></button>
+            <nav class="mob__menu-nav">
+              <ul class="mob-menu-nav__list list">
+                <li class="mob-menu-nav__item">
+                  <a href="./index.html" class="mob-menu-nav__link link mob-menu-nav__current">Студія</a>
+                </li>
+                <li class="mob-menu-nav__item">
+                  <a href="./portfolio.html" class="mob-menu-nav__link link">Портфоліо</a>
+                </li>
+                <li class="mob-menu-nav__item"><a href="" class="mob-menu-nav__link link">Контакти</a></li>
+              </ul>
+            </nav>
+        </div>
+          <div class="mob-menu-bottom">
+            <ul class="mob-contacts list">
+              <li class="mob-contacts__phone">
+                <a href="tel:+380961111111" class="mob-contacts__link link">
+                  +38 096 111 11 M8</a>
+              </li>
+              <li class="mob-contacts__mail">
+                <a href="mailto:info@devstudio.com" class="mob-contacts__link link">
+                  info@devstudio.com</a>
+              </li>
+            </ul>
+            <div class="mob-menu-network">
+              <a href="./portfolio.html" class="mob-menu-network__link first"
+                >Instagram</a
+              ><a href="" class="mob-menu-network__link"
+                >Twitter</a
+              ><a href="" class="mob-menu-network__link"
+                >Facebook</a
+              ><a href="" class="mob-menu-network__link last"
+                >LinkedIn</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
     <!---------- Главный Контент ---------->
     <main class="main">
@@ -88,12 +135,35 @@
               <a href="#" class="example-link">
                 <div class="example-box">
                   <div class="example-box-wrap">
-                    <img
-                      src="./images/tehnokryak.jpg"
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/tehnokryak-desk.jpg 1x,
+                          ./images/tehnokryak-desk-x2.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/tehnokryak-tab.jpg 1x,
+                          ./images/tehnokryak-tab-x2.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/tehnokryak-mob.jpg    1x,
+                          ./images/tehnokryak-mob-x2.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                      src="./images/tehnokryak-desk.jpg"
                       alt="Веб-сайт Технокряк"
-                      width="370"
+                      width="450"
                       height="294"
                     />
+                    </picture>
                     <p class="example-cover-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -111,12 +181,37 @@
               <a href="#" class="example-link">
                 <div class="example-box">
                   <div class="example-box-wrap">
-                    <img
-                      src="./images/poster-new-orlean-vs-golden-star.jpg"
+                    
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/poster-new-orlean-vs-golden-star-desk.jpg 1x,
+                          ./images/poster-new-orlean-vs-golden-star-desk-x2.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/poster-new-orlean-vs-golden-star-tab.jpg 1x,
+                          ./images/poster-new-orlean-vs-golden-star-tab-x2.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/poster-new-orlean-vs-golden-star-mob.jpg    1x,
+                          ./images/poster-new-orlean-vs-golden-star-mob-x2.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                      src="./images/poster-new-orlean-vs-golden-star-desk.jpg"
                       alt="Дизайн Постера New Orlean vs Golden Star"
-                      width="370"
+                      width="450"
                       height="294"
                     />
+                    </picture>
+                    
                     <p class="example-cover-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -136,13 +231,37 @@
               <a href="#" class="example-link">
                 <div class="example-box">
                   <div class="example-box-wrap">
-                    <img
-                      class=""
-                      src="./images/restaurand-seafood.jpg"
+                    
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/restaurand-seafood-desk.jpg 1x,
+                          ./images/restaurand-seafood-desk-x2.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/restaurand-seafood-tab.jpg 1x,
+                          ./images/restaurand-seafood-tab-x2.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/restaurand-seafood-mob.jpg    1x,
+                          ./images/restaurand-seafood-mob-x2.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                      src="./images/restaurand-seafood-desk.jpg"
                       alt="Приложение Ресторан Seafood"
-                      width="370"
+                      width="450"
                       height="294"
                     />
+                    </picture>
+
                     <p class="example-cover-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -160,13 +279,37 @@
               <a href="#" class="example-link">
                 <div class="example-box">
                   <div class="example-box-wrap">
-                    <img
-                      class=""
-                      src="./images/project-prime.jpg"
+
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/project-prime-desk.jpg 1x,
+                          ./images/project-prime-desk-x2.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/project-prime-tab.jpg 1x,
+                          ./images/project-prime-tab-x2.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/project-prime-mob.jpg    1x,
+                          ./images/project-prime-mob-x2.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                      src="./images/project-prime-desk.jpg"
                       alt="Маркетинг Проект Prime"
-                      width="370"
+                      width="450"
                       height="294"
                     />
+                    </picture>
+
                     <p class="example-cover-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -184,13 +327,37 @@
               <a href="#" class="example-link">
                 <div class="example-box">
                   <div class="example-box-wrap">
-                    <img
-                      class=""
-                      src="./images/project-boxes.jpg"
+
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/project-boxes-desk.jpg 1x,
+                          ./images/project-boxes-desk-x2.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/project-boxes-tab.jpg 1x,
+                          ./images/project-boxes-tab-x2.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/project-boxes-mob.jpg    1x,
+                          ./images/project-boxes-mob-x2.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                      src="./images/project-boxes-desk.jpg"
                       alt="Приложение Проект Boxes"
-                      width="370"
+                      width="450"
                       height="294"
                     />
+                    </picture>
+
                     <p class="example-cover-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -208,13 +375,37 @@
               <a href="#" class="example-link">
                 <div class="example-box">
                   <div class="example-box-wrap">
-                    <img
-                      class=""
-                      src="./images/inspiration-has-no-border.jpg"
+
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/inspiration-has-no-border-desk.jpg 1x,
+                          ./images/inspiration-has-no-border-desk-x2.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/inspiration-has-no-border-tab.jpg 1x,
+                          ./images/inspiration-has-no-border-tab-x2.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/inspiration-has-no-border-mob.jpg    1x,
+                          ./images/inspiration-has-no-border-mob-x2.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                      src="./images/inspiration-has-no-border-desk.jpg"
                       alt="Веб-сайт Inspiration has no Borders"
-                      width="370"
+                      width="450"
                       height="294"
                     />
+                    </picture>
+
                     <p class="example-cover-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -232,13 +423,38 @@
               <a href="#" class="example-link">
                 <div class="example-box">
                   <div class="example-box-wrap">
-                    <img
-                      class=""
-                      src="./images/publishing-house-limited-edition.jpg"
+
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/publishing-house-limited-edition-desk.jpg 1x,
+                          ./images/publishing-house-limited-edition-desk-x2.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/publishing-house-limited-edition-tab.jpg 1x,
+                          ./images/publishing-house-limited-edition-tab-x2.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/publishing-house-limited-edition-mob.jpg    1x,
+                          ./images/publishing-house-limited-edition-mob-x2.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                      src="./images/publishing-house-limited-edition-desk.jpg"
                       alt="Дизайн Издания Limited Edition"
-                      width="370"
+                      width="450"
                       height="294"
                     />
+                    </picture>
+
+
                     <p class="example-cover-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -256,13 +472,37 @@
               <a href="#" class="example-link">
                 <div class="example-box">
                   <div class="example-box-wrap">
-                    <img
-                      class=""
-                      src="./images/project-lab.jpg"
+
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/project-lab-desk.jpg 1x,
+                          ./images/project-lab-desk-x2.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/project-lab-tab.jpg 1x,
+                          ./images/project-lab-tab-x2.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/project-lab-mob.jpg    1x,
+                          ./images/project-lab-mob-x2.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                      src="./images/project-lab-desk.jpg"
                       alt="Маркетинг Проект LAB"
-                      width="370"
+                      width="450"
                       height="294"
                     />
+                    </picture>
+
                     <p class="example-cover-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -280,13 +520,37 @@
               <a href="#" class="example-link">
                 <div class="example-box">
                   <div class="example-box-wrap">
-                    <img
-                      class=""
-                      src="./images/growing-business.jpg"
+
+                    <picture>
+                      <source 
+                        srcset="
+                          ./images/growing-business-desk.jpg 1x,
+                          ./images/growing-business-desk-x2.jpg 2x
+                        "
+                        media="(min-width: 1200px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/growing-business-tab.jpg 1x,
+                          ./images/growing-business-tab-x2.jpg 2x
+                        "
+                        media="(min-width: 768px)"
+                      />
+                      <source 
+                        srcset="
+                          ./images/growing-business-mob.jpg    1x,
+                          ./images/growing-business-mob-x2.jpg 2x
+                        "
+                        media="(max-width: 767px)"
+                      />
+                      <img
+                      src="./images/growing-business-desk.jpg"
                       alt="Прилжение Growing Business"
-                      width="370"
+                      width="450"
                       height="294"
                     />
+                    </picture>
+
                     <p class="example-cover-text">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                       Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи
@@ -366,6 +630,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();

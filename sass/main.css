@@ -204,24 +204,6 @@ div {
 .section {
   padding: 60px 0;
 }
-@media screen and (min-width: 420px) {
-  .section {
-    padding-bottom: 60px;
-    padding-top: 60px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .section {
-    padding-bottom: 60px;
-    padding-top: 60px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .section {
-    padding-bottom: 60px;
-    padding-top: 60px;
-  }
-}
 
 .header {
   border-bottom: 1px solid #ececec;
@@ -340,6 +322,7 @@ div {
   border: none;
   background-color: transparent;
   margin-left: auto;
+  margin-top: 10px;
   padding: 0;
 }
 
@@ -362,10 +345,12 @@ div {
 .mob-menu > .container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   justify-content: space-between;
   overflow: auto;
   align-items: stretch;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .mob-menu-close {
@@ -373,6 +358,8 @@ div {
   border: none;
   background-color: transparent;
   margin-left: auto;
+  margin-top: 10px;
+  margin-right: 15px;
   padding: 0;
 }
 
@@ -455,12 +442,16 @@ div {
   }
 }
 
+.mob-menu-bottom .first {
+  padding-left: 0;
+}
+
 .mob-menu-top {
-  margin-left: 25px;
+  margin-left: 40px;
 }
 
 .mob-menu-bottom {
-  margin-left: 25px;
+  margin-left: 40px;
 }
 
 .general.section {
@@ -1133,9 +1124,9 @@ div {
 }
 
 .modal {
-  padding: 40px;
-  width: 528px;
-  height: 581px;
+  padding: 10px;
+  width: 310px;
+  height: 530px;
   background-color: var(--third-bcg-color);
   border-radius: 4px;
   position: absolute;
@@ -1143,6 +1134,27 @@ div {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 420px) {
+  .modal {
+    padding: 40px;
+    width: 450px;
+    height: 609px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal {
+    padding: 40px;
+    width: 450px;
+    height: 609px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal {
+    padding: 40px;
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-close {
@@ -1194,10 +1206,28 @@ div {
 .modal-title {
   display: block;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
+}
+@media screen and (min-width: 420px) {
+  .modal-title {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal-title {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    font-size: 20px;
+    line-height: 1.15;
+  }
 }
 
 .input-wrap {
@@ -1211,7 +1241,12 @@ div {
 }
 
 .modal-field-comment {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 420px) {
+  .modal-field-comment {
+    margin-bottom: 20px;
+  }
 }
 
 .modal-label {
@@ -1268,11 +1303,21 @@ div {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 9px;
   line-height: 1;
   letter-spacing: 0.03em;
   cursor: pointer;
   border-bottom: 1px solid var(--hover-text-color);
+}
+@media screen and (min-width: 420px) {
+  .modal-contract {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal-contract {
+    font-size: 14px;
+  }
 }
 
 .input-modal-icon {
@@ -1332,19 +1377,34 @@ div {
   display: flex;
   align-items: center;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 9px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: #757575;
   cursor: pointer;
   justify-content: center;
 }
+@media screen and (min-width: 420px) {
+  .agree-text {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .agree-text {
+    font-size: 14px;
+  }
+}
 
 .checkbox-label {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+@media screen and (min-width: 420px) {
+  .checkbox-label {
+    margin-bottom: 30px;
+  }
 }
 
 .filter-btn {
