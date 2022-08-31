@@ -10,7 +10,7 @@
   background-image: linear-gradient( 
   rgba(47, 48, 58, 0.4), 
   rgba(47, 48, 58, 0.4)),
-  url(../images/header-w480.jpg);
+  url(../images/header-w480-x1.jpg);
     @include retina {
         background-image: linear-gradient( 
         rgba(47, 48, 58, 0.4), 
@@ -21,7 +21,7 @@
       background-image: linear-gradient( 
       rgba(47, 48, 58, 0.4), 
       rgba(47, 48, 58, 0.4)),
-      url(../images/header-w768.jpg);
+      url(../images/header-w768-x1.jpg);
       max-width: 768px;
       @include retina {
         background-image: linear-gradient(
@@ -34,7 +34,7 @@
     background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)),
-    url(../images/header-w1600.jpg);
+    url(../images/header-w1600-x1.jpg);
     padding: 200px 0;
     max-width: 1600px;
     max-height: 600px;
