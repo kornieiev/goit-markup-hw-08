@@ -17,12 +17,14 @@
     line-height: 1.16;
     padding-top: 24px;
     padding-bottom: 26px;
+    margin-right: 88px;
   }
   @include desktop {
     font-size: 26px;
     line-height: 1.19;
     padding-top: 24px;
     padding-bottom: 24px;
+    margin-right: 93px;
   }
 }
 
@@ -73,13 +75,36 @@
 .navigation__list {
   display: none;
   gap: 50px;
+  @include tablet {
+    display: flex;
+  }
+}
+
+.mob-menu,
+.mob-menu-open {
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
 }
 
 .contacts {
   display: none;
-  align-items: center;
   margin-left: auto;
-  gap: 50px;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+  }
+  @include desktop {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+
+  }
 }
 
 .navigation__link {
@@ -112,6 +137,18 @@
     &:hover,
     &:focus {
       color: var(--hover-text-color);
+    }
+    @include tablet {
+      padding-top: 5px;
+      padding-bottom: 5px;
+      font-size: 12px;
+      line-height: 1.16;
+    }
+    @include desktop {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      font-size: 14px;
+      line-height: 1.14;
     }
 }
 

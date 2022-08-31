@@ -63,7 +63,7 @@
   }
   @include desktop {
     margin-bottom: 0;
-
+    align-items: flex-start;
   }
 }
 
@@ -72,13 +72,7 @@
   margin-bottom: 8px;
 }
 
-.address__list {
-  display: flex;
-  align-items: center;
-  @include tablet {
-    display: inline;
-  }
-}
+
 
 
 .address__link {
@@ -194,6 +188,7 @@
 
 .subscribe__form {
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
   align-content: center;
@@ -205,6 +200,10 @@
 
 .subscribe__label {
   width: auto;
+    @include tablet {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .subscribe__input {
