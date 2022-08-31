@@ -270,8 +270,17 @@ div {
   display: flex;
   align-items: center;
 }
-.navigation .link.navigation__current,
-.navigation .link.mob-menu-nav__current {
+.navigation .link.navigation__current {
+  color: var(--hover-text-color);
+  margin-left: auto;
+  position: relative;
+}
+
+.mob__menu-nav {
+  display: flex;
+  align-items: center;
+}
+.mob__menu-nav .link.mob-menu-nav__current {
   color: var(--hover-text-color);
   margin-left: auto;
   position: relative;

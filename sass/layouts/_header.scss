@@ -65,13 +65,22 @@
 .navigation {
   display: flex;
   align-items: center;
-    .link.navigation__current,
-    .link.mob-menu-nav__current {
+    .link.navigation__current {
     color: var(--hover-text-color);
     margin-left: auto;
     position: relative;
     }
   }
+
+  .mob__menu-nav {
+    display: flex;
+    align-items: center;
+    .link.mob-menu-nav__current {
+      color: var(--hover-text-color);
+      margin-left: auto;
+      position: relative;
+      }
+    }
 
 .navigation__list {
   display: none;
