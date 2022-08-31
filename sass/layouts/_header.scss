@@ -65,7 +65,8 @@
 .navigation {
   display: flex;
   align-items: center;
-    .link.navigation__current {
+    .link.navigation__current,
+    .link.mob-menu-nav__current {
     color: var(--hover-text-color);
     margin-left: auto;
     position: relative;
