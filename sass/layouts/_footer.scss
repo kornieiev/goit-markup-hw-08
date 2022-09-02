@@ -5,10 +5,12 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    
 
-    justify-content: center;
+    justify-content: space-between;
     @include tablet {
       flex-direction: row;
+      align-content: space-around;
       align-items: baseline;
       max-width: 768px;
     }
@@ -53,7 +55,6 @@
 }
 
 .address__list {
-  margin-top: 20px;
   margin-bottom: 0px;
   display: flex;
   flex-direction: column;
@@ -166,9 +167,7 @@
 }
 
 .subscribe {
-  // margin-left: 93px;
   display: flex;
-  // margin-top: 60px;
   flex-direction: column;
   align-items: center;
     @include tablet {
@@ -178,7 +177,7 @@
     }
     @include desktop {
       width: auto;
-      margin-left: 93px;
+      margin-left: auto;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
